@@ -1,0 +1,237 @@
+{
+	"compiler": {
+		"version": "0.8.15+commit.e14f2714"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_accountName",
+						"type": "string"
+					},
+					{
+						"internalType": "string[]",
+						"name": "_targetAccsName",
+						"type": "string[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "BulkTransfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "accountName",
+						"type": "string"
+					}
+				],
+				"name": "CreateAccount",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "accountName",
+						"type": "string"
+					}
+				],
+				"name": "Deposit",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_accountName",
+						"type": "string"
+					}
+				],
+				"name": "GetAccountsInfo",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "address",
+								"name": "addr",
+								"type": "address"
+							},
+							{
+								"internalType": "string",
+								"name": "name",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "balance",
+								"type": "uint256"
+							},
+							{
+								"internalType": "bool",
+								"name": "isExisted",
+								"type": "bool"
+							},
+							{
+								"components": [
+									{
+										"internalType": "string",
+										"name": "sender",
+										"type": "string"
+									},
+									{
+										"internalType": "string",
+										"name": "receiver",
+										"type": "string"
+									},
+									{
+										"internalType": "uint256",
+										"name": "txvalue",
+										"type": "uint256"
+									},
+									{
+										"internalType": "uint256",
+										"name": "amount",
+										"type": "uint256"
+									},
+									{
+										"internalType": "bool",
+										"name": "feeCollected",
+										"type": "bool"
+									},
+									{
+										"internalType": "bool",
+										"name": "toBank",
+										"type": "bool"
+									},
+									{
+										"internalType": "uint256",
+										"name": "timestamp",
+										"type": "uint256"
+									}
+								],
+								"internalType": "struct Bank.TransactionStruct[]",
+								"name": "transactionHistory",
+								"type": "tuple[]"
+							}
+						],
+						"internalType": "struct Bank.AccountStruct",
+						"name": "",
+						"type": "tuple"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "GetAccountsList",
+				"outputs": [
+					{
+						"internalType": "string[]",
+						"name": "",
+						"type": "string[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_accountName",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "_targetAccName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Transfer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "accountName",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "amount",
+						"type": "uint256"
+					}
+				],
+				"name": "Withdraw",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts\\Account.sol": "Bank"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts\\Account.sol": {
+			"keccak256": "0x6df161f73aa323ab507457ecfc61dfc0e509051d62efaffa37388e5683e1f5cc",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6921dbca5feec3eaece1b8c7c6862a3356c51491d73db92a5664c23175282473",
+				"dweb:/ipfs/QmScVPLNE1o844wYpzdE2Hg4BDkayAYtCermggvavK8pSX"
+			]
+		}
+	},
+	"version": 1
+}
