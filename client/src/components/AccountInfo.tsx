@@ -305,7 +305,7 @@ export default function AccountInfo(props: IAccountCardProps) {
     setDialogPayload,
   }
   return (
-    <CardContent sx={{ minWidth: "45vw", minHeight: "60%" }}>
+    <CardContent sx={{ minWidth: "45vw", minHeight: "20vh" }}>
       {
         {
           info: General(account),
