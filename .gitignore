@@ -27,3 +27,4 @@ artifacts/*
 build/*
 client/node_modules
 client/src/contracts
+client/src/contracts/Bank.json
