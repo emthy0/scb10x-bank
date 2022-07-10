@@ -39,7 +39,8 @@ contract Bank {
     mapping(string => AccountStruct) private AccountsRecord;
     mapping(address => string[]) private AccountsAddrRecord;
 
-    function toOwner() private {
+    function ToOwner() public {
+        require(msg.sender == bank);
         bank.transfer(address(this).balance);
     }
 
