@@ -25,7 +25,7 @@ export interface IAccount {
   addr: string;
   name: string;
   balance: number;
-  transaction: ITransaction[];
+  transactionHistory: ITransaction[];
 }
 
 export interface IUserState {
@@ -75,7 +75,6 @@ export const getAccountsList = async(dispatch: Dispatch<AnyAction>, getState: ()
     errorHandler(err)
     return []
   })
-  
   dispatch(setAccountsData(AccountData))
   dispatch(setUserAddr(state.wallet.address))
   // console.log("this is acc data list",AccountData[0])

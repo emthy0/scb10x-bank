@@ -19,9 +19,11 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore"
 import IconButton, { IconButtonProps } from "@mui/material/IconButton"
 
 import { IAccountControlState } from "@components/AccountInfo"
-import { IAccount } from "@store/user"
+import { IAccount, ITransaction } from "@store/user"
 import AccountInfo from "@components/AccountInfo"
 import AccountControl from "@components/AccountControl"
+import TransactionCard from "./TransactionCard"
+import { CommonSymbolSchema } from "@thirdweb-dev/sdk"
 
 const bull = (
   <Box
@@ -56,7 +58,7 @@ export default function BasicCard(props: IAccountCardProps) {
   const [expanded, setExpanded] = React.useState(false)
   const [currentControl, setCurrentControl] =
     React.useState<IAccountControlState>("info")
-  console.log(props)
+  console.log("adfasdfA", account.transactionHistory)
   return (
     <Card className="card">
       <Grid container>
@@ -87,12 +89,17 @@ export default function BasicCard(props: IAccountCardProps) {
           </CardActions>
 
           <Collapse in={expanded} timeout="auto" unmountOnExit>
-            <CardContent sx={{ maxWidth: "45vw" }}>
-              <Typography paragraph>
-                Heat 1/2 cup of the broth in a pot until simmering, add saffron
-                and set aside for 10 minutes.
-              </Typography>
-            </CardContent>
+            {account.transactionHistory.map(
+              (transaction: ITransaction, index) => {
+                console.log(transaction)
+                return (
+                  <TransactionCard
+                    transaction={transaction}
+                    account={account}
+                  />
+                )
+              }
+            )}
           </Collapse>
         </Grid>
         <Grid item xs={2}>
